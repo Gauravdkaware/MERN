@@ -1,0 +1,56 @@
+body {
+    background-color: beige;
+    margin: 30px;
+    text-align: center;
+}
+
+.box {
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px gray;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+h1 {
+    color: brown;
+}
+
+h2 {
+    margin-top: 10px;
+    color: darkred;
+}
+
+.biryani-image {
+    border: 3px solid brown;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.description {
+    margin: 10px 100px;
+    text-align: center;
+    color: #000;
+}
+
+.ingredients {
+    text-align: left;
+    color: rgb(15, 109, 15);
+
+    background-image: url("/assests/chicken-biryan-ingredients.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px 40px;
+}
+
+.process {
+    text-align: left;
+
+    background-image: url("/assests/kitchen.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px 40px;
+}
+
+.icon {
+    color: #3b3838;
+}

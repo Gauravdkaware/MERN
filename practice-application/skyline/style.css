@@ -1,0 +1,204 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(180 215 223 / 80%);
+    padding: 10px 17px;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 96%;
+}
+.goTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: rgb(89, 89, 89);
+    border-radius: 50%;
+}
+.logo {
+    flex: 1;
+}
+.logo img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.navigation {
+    flex: 2;
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.sectionOne {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(160 212 223 / 80%);
+    margin-top: 84px;
+}
+.sectionOne img {
+    width: 650px;
+    height: 400px;
+    padding: 10px;
+    margin-left: 20px;
+}
+.sectionOneD {
+    padding: 20px;
+    font-style: italic;
+}
+
+.mainContent {
+    display: flex;
+    width: 100%;
+}
+.leftSide {
+    flex: 5.5;
+}
+.rightSide {
+    flex: 4.5;
+}
+.rightSide img {
+    width: 74%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sectionTwo {
+    background-color: rgb(150 209 223 / 80%);
+    padding: 1px 20px;
+}
+h2 {
+    margin-left: 30px;
+}
+.specifications {
+    width: 80%;
+    margin: 20px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    background-color: rgba(190, 217, 223, 0.8);
+}
+.specRow {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+}
+.specRow:last-child {
+    border-bottom: none;
+}
+.specName {
+    flex: 1;
+    padding-left: 15px;
+    font-size: 15px;
+}
+.specValue {
+    flex: 2;
+    font-size: 15px;
+}
+
+.sectionThree {
+    background-color: rgb(140 206 223 / 80%);
+    padding: 2px 20px;
+}
+.variants {
+    width: 80%;
+    margin: 20px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    background-color: rgba(190, 217, 223, 0.8);
+}
+.varRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    padding: 0 15px;
+}
+.varRow:last-child {
+    border-bottom: none;
+}
+.varName {
+    padding-left: 15px;
+    font-size: 15px;
+}
+.varName span {
+    display: block;
+    font-size: 12px;
+    color: rgb(91, 91, 91);
+    margin-top: 5px;
+}
+.varValue {
+    font-size: 15px;
+}
+
+.sectionFour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(130 203 223 / 80%);
+}
+.imageOne, .imageTwo {
+    flex: 1;
+}
+.figImage {
+    width: 100%;
+    margin: 0;
+}
+.figImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.figImage figcaption {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(56, 56, 56);
+}
+
+.sectionFive {
+    background-color: rgb(110 195 223 / 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactForm {
+    margin: 20px;
+    width: 400px;
+    padding: 30px;
+    background-color: rgba(190, 217, 223, 0.8);
+    border: 1px solid #000;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contactForm input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.contactForm button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(100 190 223 / 80%);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}

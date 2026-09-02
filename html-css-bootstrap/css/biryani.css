@@ -36,7 +36,7 @@ h2 {
     text-align: left;
     color: rgb(15, 109, 15);
 
-    background-image: url("/assests/chicken-biryan-ingredients.jpg");
+    background-image: url("./assets/chicken-biryan-ingredients.jpg");
     background-size: cover;
     background-position: center;
     padding: 20px 40px;
@@ -45,7 +45,7 @@ h2 {
 .process {
     text-align: left;
 
-    background-image: url("/assests/kitchen.jpg");
+    background-image: url("./assets/kitchen.jpg");
     background-size: cover;
     background-position: center;
     padding: 20px 40px;

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toy Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-between align-items-center px-1"
+    >
+      <div class="left-first d-flex">
+        <p class="mb-0">Welcome you to ToyShop!</p>
+      </div>
+      <div class="right-first d-flex">
+        <button class="btn customHover">SignIn / Join</button>
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle customHover"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            USA $
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button class="dropdown-item" type="button">EUR</button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">USD</button>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle customHover"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            English
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button class="dropdown-item" type="button">English</button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">Francais</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class="mt-1" />
+
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="left-second pe-4">
+        <img src="./assets/logo.png" alt="" width="200" height="40" />
+      </div>
+      <div class="middle-second flex-grow-1 px-5">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter your search key..."
+            aria-label="Enter your search key..."
+            aria-describedby="button-addon2"
+          />
+          <button class="btn search-button" type="button" id="button-addon2">
+            Search
+          </button>
+        </div>
+      </div>
+      <div class="right-second d-flex justify-content-around ps-4 gap-3">
+        <i class="fa-solid fa-shuffle fs-3 position-relative">
+          <span
+            class="badge sm position-absolute top-100 start-90 translate-middle rounded-pill text-bg-info text-white"
+            >0</span
+          >
+        </i>
+        <i class="fa-regular fa-heart fs-3 position-relative">
+          <span
+            class="badge sm position-absolute top-100 start-90 translate-middle rounded-pill text-bg-info text-white"
+            >0</span
+          >
+        </i>
+        <i class="fa-solid fa-cart-shopping fs-3 position-relative">
+          <span
+            class="badge sm position-absolute top-100 start-90 translate-middle rounded-pill text-bg-info text-white"
+            >0</span
+          >
+        </i>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-info mt-4">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"> All Categories </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Baby Toys</a></li>
+                <li><a class="dropdown-item" href="#">Baby Toddler</a></li>
+                <li><a class="dropdown-item" href="#">Outdoor Play</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"> Shop </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Shop Left</a></li>
+                <li><a class="dropdown-item" href="#">Shop Right</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"> Product </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Product 1</a></li>
+                <li><a class="dropdown-item" href="#">Product 2</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"> Pages </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">My Account</a></li>
+                <li><a class="dropdown-item" href="#">My Wishlist</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

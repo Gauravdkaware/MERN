@@ -1,0 +1,41 @@
+:root {
+    --info: #0dcaf0;
+}
+.customHover:hover {
+    display: block;
+    border: none !important;
+    color: var(--info) !important;
+}
+.customHover:hover .dropdown-menu {
+    display: block;
+}
+.input-group .form-control {
+    border-radius: 25px;
+    height: 45px;
+}
+.input-group .search-button {
+    width: 25%;
+    height: 45px;
+    border-radius: 25px;
+    color: white !important;
+    background-color: var(--info) !important;
+}
+.search-button:hover {
+    background-color: black !important;
+}
+.right-second i:hover {
+    color: var(--info) !important;
+}
+.badge.sm {
+  font-size: 11px;
+}
+.navbar  .nav-link {
+    color: white
+}
+.navbar  .nav-link:hover {
+    color: white;
+    display: block;
+}
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}

@@ -39,3 +39,43 @@
 .navbar .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+/* MODAL */
+.btn-close {
+    background-color: var(--info) !important;
+}
+.btn-close:hover {
+    background-color: black !important;
+}
+.form-floating .form-control {
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  border-radius: 0 !important;
+}
+.form-floating .form-control:focus {
+  border: none !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid black !important;
+  border-radius: 0 !important;
+}
+.modal-footer button {
+    color: white;
+    border-radius: 25px;
+    margin: 0 auto;
+    width: 250px;
+    height: 45px;
+}
+.modal-footer button:hover {
+    color: white;
+    background-color: black;
+    border: none;
+}
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-footer p {
+  font-size: 12px;
+  margin: 0;
+}

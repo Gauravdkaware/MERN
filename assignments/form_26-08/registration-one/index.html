@@ -4,7 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rigister</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 500px;
+        border: 10px solid #eeeeee;
+        box-shadow: 0 0 5px #cccccc;
+      }
+      .container h1,
+      .container p {
+        margin-left: 17px;
+      }
+      form label {
+        font-weight: bold;
+        font-size: 25px;
+        margin-left: 17px;
+      }
+      form input {
+        width: 90%;
+        padding: 7px 6px;
+        margin-left: 17px;
+      }
+      form button {
+        width: 93%;
+        height: 35px;
+        margin-left: 17px;
+      }
+      .login-text {
+        text-align: center;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1><b>Register</b></h1>
+
+      <p>Kindly fill in this form to register.</p>
+
+      <form>
+        <label for="name">Username</label>
+        <br />
+        <input type="text" id="name" placeholder="Enter username" />
+        <br />
+        <label for="email">Email</label>
+        <br />
+        <input type="email" id="email" placeholder="Enter Email" />
+        <br />
+
+        <label for="password">Password</label>
+        <br />
+        <input type="password" id="password" placeholder="Enter Password" />
+        <br />
+
+        <label for="repeat-password">Repeat Password</label>
+        <br />
+        <input
+          type="password"
+          id="repeat-password"
+          placeholder="Repeat Password"
+        />
+        <br />
+
+        <button type="submit">Register</button>
+      </form>
+      <p class="login-text">
+        Already have an account?
+        <a href="#">Log in.</a>
+      </p>
+    </div>
+  </body>
 </html>

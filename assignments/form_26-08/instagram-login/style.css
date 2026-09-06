@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-box {
+    width: 1250px;
+    min-height: 630px;
+    background-color: black;
+}
+.left-side {
+    color: white;
+    position: relative;
+    padding: 20px;
+    border-right: 2px solid #34444e;
+}
+.instagram-icon {
+    font-size: 90px;
+    background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.left-side h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+.left-side h1 span {
+    background: linear-gradient(
+        to right,
+        #ff7a00,
+        #ff0069,
+        #c32aa3
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.instagram-image {
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin: 30px auto 0;
+}
+
+.right-side {
+    background-color: #121d23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form {
+    width: 530px;
+}
+.login-form h5 {
+    color: white;
+    margin-bottom: 30px;
+}
+.login-form .form-control {
+    height: 80px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: 2px solid #394b56;
+    border-radius: 20px;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+}
+.login-form .form-control::placeholder {
+    color: #8998a2;
+}
+.login-form .form-control:focus {
+    background-color: transparent;
+    border-color: #6c7c85;
+    box-shadow: none;
+    color: white;
+}
+.login-btn {
+    width: 100%;
+    height: 58px;
+    margin-top: 15px;
+    border-radius: 30px;
+    background-color: #1e559b;
+    color: #aaa;
+    font-size: 17px;
+    border: none;
+}
+.login-btn:hover {
+    background-color: #2867b8;
+    color: white;
+}
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 35px;
+    color: white;
+    text-decoration: none;
+}
+
+.facebook-login {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #394b56;
+    border-radius: 30px;
+}
+
+.facebook-login i {
+    color: #1877f2;
+    margin-right: 8px;
+}
+.create-account {
+    width: 100%;
+    height: 58px;
+    margin-top: 15px;
+    border: 2px solid #1683d8;
+    border-radius: 30px;
+    color: #1683d8;
+    background-color: transparent;
+}

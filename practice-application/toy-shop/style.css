@@ -1,5 +1,9 @@
 :root {
     --info: #0dcaf0;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --light-gray: rgb(236, 236, 236);
 }
 .customHover:hover {
     display: block;
@@ -12,6 +16,10 @@
 .input-group .form-control {
     border-radius: 25px;
     height: 45px;
+}
+.input-group .form-control:focus {
+    box-shadow: none;
+    border: 1px solid var(--gray-400);
 }
 .input-group .search-button {
     width: 25%;
@@ -30,7 +38,10 @@
   font-size: 11px;
 }
 .navbar  .nav-link {
-    color: white
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin-right: 14px;
 }
 .navbar  .nav-link:hover {
     color: white;
@@ -38,6 +49,25 @@
 }
 .navbar .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+/* Support */
+.support-container {
+    padding: 20px 20px;
+    border: 1px solid var(--gray-400);
+    border-radius: 5px;
+}
+.support-container i{
+    font-size: 35px;
+    color: var(--info);
+}
+.support-container p{
+    color: var(--gray-600);
+    font-size: 13px;
+    margin-top: 0;
+}
+.support-container h6{
+    margin-bottom: 0;
 }
 
 /* MODAL */
@@ -76,6 +106,51 @@
     align-items: center;
 }
 .modal-footer p {
-  font-size: 12px;
-  margin: 0;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Bottom Container */
+.bottom-container {
+    width: 100%;
+    padding: 10px 10px;
+    background-color: var(--info);
+    color: white;
+}
+.phone i{
+    margin-top: 6px;
+    font-size: 45px;
+}
+.bottom-container p {
+    font-size: 15px;
+    color: var(--light-gray);
+}
+.icon-container i{
+    font-size: 22px;
+    color: var(--light-gray);
+}
+.bottom-container li {
+    margin-bottom: 13px;
+    font-size: 15px;
+    color: var(--light-gray);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.bottom-container li:hover {
+  transform: translateX(10px);
+}
+.input-group .email-button {
+    width: 25%;
+    height: 45px;
+    border-radius: 25px;
+    color: white !important;
+    background-color: rgb(46, 45, 45) !important;
+    transition: box-shadow 0.3s ease;
+}
+.email-button:hover {
+    box-shadow: 0 0 50px white;
+}
+.img-container img{
+    width: 60px;
+    height: 35px;
 }

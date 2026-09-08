@@ -21,55 +21,55 @@
   </head>
   <body>
     <!-- First Nav -->
-    <div
-      class="container d-flex justify-content-between align-items-center px-1"
-    >
-      <div class="left-first d-flex">
-        <p class="mb-0">Welcome you to ToyShop!</p>
-      </div>
-      <div class="right-first d-flex">
-        <button
-          class="btn customHover"
-          data-bs-toggle="modal"
-          data-bs-target="#loginModal"
-        >
-          SignIn / Join
-        </button>
-        <div class="dropdown">
-          <button
-            class="btn dropdown-toggle customHover"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            USA $
-          </button>
-          <ul class="dropdown-menu">
-            <li>
-              <button class="dropdown-item" type="button">EUR</button>
-            </li>
-            <li>
-              <button class="dropdown-item" type="button">USD</button>
-            </li>
-          </ul>
+    <div class="container-fluid top-bar px-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="left-first d-flex">
+          <p class="mb-0">Welcome you to ToyShop!</p>
         </div>
-        <div class="dropdown">
+        <div class="right-first d-flex align-items-center">
           <button
-            class="btn dropdown-toggle customHover"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+            class="btn customHover"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
           >
-            English
+            SignIn / Join
           </button>
-          <ul class="dropdown-menu">
-            <li>
-              <button class="dropdown-item" type="button">English</button>
-            </li>
-            <li>
-              <button class="dropdown-item" type="button">Francais</button>
-            </li>
-          </ul>
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle customHover"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              USA $
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button">EUR</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">USD</button>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle customHover"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              English
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button">English</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Francais</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -221,45 +221,45 @@
     <!-- Support -->
     <div class="container-fluid support-container w-100 mt-5">
       <div class="row">
-        <div class="col-md-3">
-          <div class="row ms-2">
-            <div class="col-md-2">
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="row">
+            <div class="col-2">
               <i class="fa-regular fa-truck"></i>
             </div>
-            <div class="col-md-10">
+            <div class="col-10">
               <h6>Free Shipping</h6>
               <p>On all orders over $75.00</p>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-6 col-12">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-2">
               <i class="fa-solid fa-globe"></i>
             </div>
-            <div class="col-md-10">
+            <div class="col-10">
               <h6>Free Returns</h6>
               <p>Returns are free within 9 days</p>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-6 col-12">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-2">
               <i class="fa-solid fa-user-shield"></i>
             </div>
-            <div class="col-md-10">
+            <div class="col-10">
               <h6>100% Payment Secure</h6>
               <p>Your payment are safe with us.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-6 col-12">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-2">
               <i class="fa-solid fa-phone"></i>
             </div>
-            <div class="col-md-10">
+            <div class="col-10">
               <h6>Support 24/7</h6>
               <p>Contact us 24 hours a day</p>
             </div>
@@ -294,6 +294,153 @@
       </div>
     </div>
 
+    <!-- Recently Added -->
+    <div class="container-fluid recent-container w-100 mt-5">
+      <h2>Recently Added</h2>
+      <div class="row mt-3 g-4">
+        <div class="col-lg-3 col-md-4 col-12">
+          <div class="recent-card">
+            <img src="./assets/product-1.jpg" alt="..." />
+            <div class="card-body ms-3">
+              <h5 class="text-secondary">STUDIO DESIGN</h5>
+              <p class="text-dark mb-0"><b>Juicy Couture...</b></p>
+              <div class="star-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h6 class="text-info mt-1"><b>$40.00</b></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12">
+          <div class="recent-card">
+            <img src="./assets/product-2.jpg" alt="..." />
+            <div class="card-body ms-3">
+              <h5 class="text-secondary">STUDIO DESIGN</h5>
+              <p class="text-dark mb-0"><b>Checked Wool..</b></p>
+              <div class="star-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h6 class="text-info mt-1"><b>$29.00</b></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12">
+          <div class="recent-card">
+            <img src="./assets/product-3.jpg" alt="..." />
+            <div class="card-body ms-3">
+              <h5 class="text-secondary">STUDIO DESIGN</h5>
+              <p class="text-dark mb-0"><b>Brixton Patrol A...</b></p>
+              <div class="star-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h6 class="text-info mt-1"><b>$9.00 - $26.00</b></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12">
+          <div class="recent-card">
+            <img src="./assets/product-4.jpg" alt="..." />
+            <div class="card-body ms-3">
+              <h5 class="text-secondary">STUDIO DESIGN</h5>
+              <p class="text-dark mb-0"><b>Fila Locker Roo...</b></p>
+              <div class="star-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h6 class="text-danger mt-1">
+                <b><del class="text-secondary me-1">$62.00</del>$55.00</b>
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12">
+          <div class="recent-card">
+            <img src="./assets/product-5.jpg" alt="..." />
+            <div class="card-body ms-3">
+              <h5 class="text-secondary">STUDIO DESIGN</h5>
+              <p class="text-dark mb-0"><b>Water and Wind...</b></p>
+              <div class="star-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h6 class="text-info mt-1"><b>$75.00</b></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12">
+          <div class="recent-card">
+            <img src="./assets/product-6.jpg" alt="..." />
+            <div class="card-body ms-3">
+              <h5 class="text-secondary">STUDIO DESIGN</h5>
+              <p class="text-dark mb-0"><b>New Balance...</b></p>
+              <div class="star-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h6 class="text-danger mt-1">
+                <b><del class="text-secondary me-1">$62.00</del>$52.00</b>
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12">
+          <div class="recent-card">
+            <img src="./assets/product-7.jpg" alt="..." />
+            <div class="card-body ms-3">
+              <h5 class="text-secondary">STUDIO DESIGN</h5>
+              <p class="text-dark mb-0"><b>Madden By Stev...</b></p>
+              <div class="star-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h6 class="text-info mt-1"><b>$29.00 - $75.00</b></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12">
+          <div class="recent-card">
+            <img src="./assets/product-8.jpg" alt="..." />
+            <div class="card-body ms-3">
+              <h5 class="text-secondary">STUDIO DESIGN</h5>
+              <p class="text-dark mb-0"><b>Juicy Couture...</b></p>
+              <div class="star-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h6 class="text-info mt-1"><b>$10.00</b></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Single Image -->
     <div class="container-fluid two-images w-100 mt-5">
       <div class="row">
@@ -312,8 +459,8 @@
     <!-- Popular Categories -->
     <div class="container-fluid categories-container w-100 mt-5">
       <h2>Popular Categories</h2>
-      <div class="row mt-4">
-        <div class="col-md-4">
+      <div class="row mt-3 g-4">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="category-card">
             <img src="./assets/toy-1.jpg" alt="Preschool Toys" />
             <div class="card-content">
@@ -326,7 +473,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="category-card">
             <img src="./assets/toy-1.jpg" alt="Preschool Toys" />
             <div class="card-content">
@@ -339,7 +486,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="category-card">
             <img src="./assets/toy-1.jpg" alt="Preschool Toys" />
             <div class="card-content">
@@ -352,9 +499,7 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="category-card">
             <img src="./assets/toy-1.jpg" alt="Preschool Toys" />
             <div class="card-content">
@@ -367,7 +512,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="category-card">
             <img src="./assets/toy-1.jpg" alt="Preschool Toys" />
             <div class="card-content">
@@ -380,7 +525,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="category-card">
             <img src="./assets/toy-1.jpg" alt="Preschool Toys" />
             <div class="card-content">
@@ -397,95 +542,97 @@
     </div>
 
     <!-- Bottom Bar -->
-    <div class="container-fluid bottom-container w-100 mt-5">
-      <div class="row mt-5">
-        <div class="first-sub col-md-4">
-          <img src="./assets/logo.png" alt="" width="200" height="40" />
-          <p class="mt-4">
-            We are a team of designers and developers that create high quality
-            Magento, Prestashop, Opencart.
-          </p>
-          <div class="row">
-            <div class="col-md-2 phone">
-              <i class="fa-solid fa-phone-volume"></i>
+    <footer>
+      <div class="container-fluid bottom-container w-100 mt-5">
+        <div class="row mt-5">
+          <div class="first-sub col-md-4">
+            <img src="./assets/logo.png" alt="" width="200" height="40" />
+            <p class="mt-4">
+              We are a team of designers and developers that create high quality
+              Magento, Prestashop, Opencart.
+            </p>
+            <div class="row">
+              <div class="col-md-2 phone">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="col-md-10">
+                <p class="mb-1">NEED HELP?</p>
+                <h5>(+800) 345 678, (+800) 123 456</h5>
+              </div>
             </div>
-            <div class="col-md-10">
-              <p class="mb-1">NEED HELP?</p>
-              <h5>(+800) 345 678, (+800) 123 456</h5>
+            <div
+              class="icon-container d-flex mt-3 justify-content-start gap-3 ms-2"
+            >
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-google-plus"></i>
+              <i class="fa-brands fa-youtube"></i>
             </div>
           </div>
-          <div
-            class="icon-container d-flex mt-3 justify-content-start gap-3 ms-2"
-          >
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-google-plus"></i>
-            <i class="fa-brands fa-youtube"></i>
+          <div class="second-sub col-md-2">
+            <h5><b>Information</b></h5>
+            <hr />
+            <ul class="list-unstyled mt-4">
+              <li>Delivery</li>
+              <li>About Us</li>
+              <li>Secure Payment</li>
+              <li>Contact Us</li>
+              <li>Sitemap</li>
+              <li>Stores</li>
+            </ul>
+          </div>
+          <div class="third-sub col-md-2">
+            <h5><b>Custom Links</b></h5>
+            <hr />
+            <ul class="list-unstyled mt-4">
+              <li>Legal Notice</li>
+              <li>Prices Drop</li>
+              <li>New Products</li>
+              <li>Best Sales</li>
+              <li>Login</li>
+              <li>My Account</li>
+            </ul>
+          </div>
+          <div class="fourth-sub col-md-4">
+            <h5><b>Newsletter</b></h5>
+            <hr />
+            <p class="mt-4">
+              You may unsubscribe at any moment. For that purpose, please find
+              our contact info in the legal notice.
+            </p>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Your email address"
+                aria-label="Your email address"
+                aria-describedby="button-addon2"
+              />
+              <button class="btn email-button" type="button" id="button-addon2">
+                Sign Up
+              </button>
+            </div>
           </div>
         </div>
-        <div class="second-sub col-md-2">
-          <h5><b>Information</b></h5>
-          <hr />
-          <ul class="list-unstyled mt-4">
-            <li>Delivery</li>
-            <li>About Us</li>
-            <li>Secure Payment</li>
-            <li>Contact Us</li>
-            <li>Sitemap</li>
-            <li>Stores</li>
-          </ul>
-        </div>
-        <div class="third-sub col-md-2">
-          <h5><b>Custom Links</b></h5>
-          <hr />
-          <ul class="list-unstyled mt-4">
-            <li>Legal Notice</li>
-            <li>Prices Drop</li>
-            <li>New Products</li>
-            <li>Best Sales</li>
-            <li>Login</li>
-            <li>My Account</li>
-          </ul>
-        </div>
-        <div class="fourth-sub col-md-4">
-          <h5><b>Newsletter</b></h5>
-          <hr />
-          <p class="mt-4">
-            You may unsubscribe at any moment. For that purpose, please find our
-            contact info in the legal notice.
-          </p>
-          <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Your email address"
-              aria-label="Your email address"
-              aria-describedby="button-addon2"
-            />
-            <button class="btn email-button" type="button" id="button-addon2">
-              Sign Up
-            </button>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <p>
+              © Copyright 2026 ToyShop - All Rights Reserved - Powered by
+              WooVina Theme.
+            </p>
           </div>
+          <div class="img-container d-flex col-md-4">
+            <img src="./assets/american-express.png" alt="" />
+            <img src="./assets/PayPal.png" alt="" />
+            <img src="./assets/Bitcoin.png" alt="" />
+            <img src="./assets/Mastercard.png" alt="" />
+            <img src="./assets/Visa.png" alt="" />
+          </div>
+          <div class="col-md-4"></div>
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="col-md-4">
-          <p>
-            © Copyright 2026 ToyShop - All Rights Reserved - Powered by WooVina
-            Theme.
-          </p>
-        </div>
-        <div class="img-container d-flex col-md-4">
-          <img src="./assets/american-express.png" alt="" />
-          <img src="./assets/PayPal.png" alt="" />
-          <img src="./assets/Bitcoin.png" alt="" />
-          <img src="./assets/Mastercard.png" alt="" />
-          <img src="./assets/Visa.png" alt="" />
-        </div>
-        <div class="col-md-4"></div>
-      </div>
-    </div>
+    </footer>
 
     <!-- LogIn Modal -->
     <div

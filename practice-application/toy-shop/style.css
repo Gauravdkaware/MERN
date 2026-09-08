@@ -4,7 +4,59 @@
     --gray-500: #adb5bd;
     --gray-600: #6c757d;
     --gray-700: #495057;
+    --gray-800: #343a40;
+    --warning: #ffc107;
 }
+
+/* MOBILE */
+@media (max-width: 767px) {
+
+    .top-bar .container {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .right-first {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* TAB */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .category-card {
+        height: 320px;
+        padding: 15px;
+    }
+
+    .category-card img {
+        width: 38%;
+        height: 160px;
+    }
+
+    .card-content {
+        width: 62%;
+        padding-left: 15px;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .card-content a {
+        font-size: 13px;
+    }
+}
+
 .customHover:hover {
     display: block;
     border: none !important;
@@ -117,6 +169,45 @@
     transform: translateY(calc(-50% - 15px));
 }
 
+/* Recently Added */
+.recent-container h2 {
+    font-weight: bold;
+    font-family: cursive;
+}
+.recent-card {
+    height: 135px;
+    border: 1px solid var(--gray-400);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.recent-card img {
+    width: 40%;
+    height: 100px;
+    object-fit: contain;
+}
+.card-body {
+    width: 60%;
+    padding-left: 30px;
+}
+.card-body h5, .card-body p {
+    font-size: 14px;
+    margin-bottom: 3px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.card-body h5:hover {
+  color: var(--gray-800) !important;
+}
+.card-body p:hover {
+  color: var(--info) !important;
+}
+.star-icon i {
+    font-size: 13px;
+    color: gold;
+}
+
 /* Popular Categories */
 .categories-container h2 {
     font-weight: bold;
@@ -150,8 +241,8 @@
     cursor: pointer;
 }
 .card-content p:hover {
-  transform: translateX(10px);
-  color: var(--info);
+    transform: translateX(10px);
+    color: var(--info);
 }
 .card-content a {
     display: block;
@@ -163,7 +254,7 @@
     transition: transform 0.3s ease;
 }
 .card-content a:hover {
-  color: var(--info);
+    color: var(--info);
 }
 .card-content a span {
     display: inline-flex;

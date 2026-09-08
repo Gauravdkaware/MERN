@@ -1,0 +1,21 @@
+.main-container {
+    background-color: rgb(69, 69, 242);
+}
+.registration-container {
+    margin: 0 auto;
+    width: 80%;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+}
+.next-button {
+    width: 150px;
+    background-color: rgb(69, 69, 242);
+    margin-top: 15px;
+    color: whitesmoke;
+    transition: transform 0.3s ease;
+}
+.next-button:hover {
+    background-color: black;
+    color: whitesmoke;
+}

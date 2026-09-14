@@ -5,24 +5,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real Estate</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
-      <nav class="navBar">
+      <nav class="navBar mx-4">
         <div class="navLeft">
           <img src="./assets/logo.png" alt="" />
         </div>
         <div class="navRight">
-          <a href="#">Home</a>
-          <a href="#">Explore</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse">
+                <ul class="navbar-nav gap-2">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Explore</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                </ul>
+                <button
+                  class="btn ms-2"
+                  style="background-color: #2495fd; color: white"
+                >
+                  Request a call
+                </button>
+              </div>
+            </div>
+          </nav>
         </div>
       </nav>
     </header>
-    <section class="filter"></section>
-    <section class="explore"></section>
-    <section class="gridProperty">
+
+    <section class="filter">
+      <div class="overlay"></div>
+      <div class="container filter-content">
+        <div class="text-center text-white">
+          <h1>YOUR DREAM HOME</h1>
+          <h2>IS ONE CLICK AWAY</h2>
+        </div>
+        <div class="tabs d-flex justify-content-center gap-1">
+          <button class="tab active">ALL UNITS</button>
+          <button class="tab">FOR RENT</button>
+          <button class="tab">FOR SALE</button>
+        </div>
+        <div class="search-box">
+          <div class="row g-2 align-items-end w-100">
+            <div class="col">
+              <label>LOOKING FOR</label>
+              <select class="form-select">
+                <option selected>Property Type</option>
+                <option>Apartment</option>
+                <option>House</option>
+                <option>Villa</option>
+              </select>
+            </div>
+            <div class="col">
+              <label>LOCATION</label>
+              <select class="form-select">
+                <option selected>All Cities</option>
+                <option>Pune</option>
+                <option>Mumbai</option>
+                <option>Nagpur</option>
+              </select>
+            </div>
+            <div class="col">
+              <label>PROPERTY SIZE</label>
+              <select class="form-select">
+                <option selected>Bedrooms</option>
+                <option>1 Bedroom</option>
+                <option>2 Bedrooms</option>
+                <option>3 Bedrooms</option>
+              </select>
+            </div>
+            <div class="col">
+              <label>BUDGET</label>
+              <select class="form-select">
+                <option selected>Max. Price</option>
+                <option>₹50 Lakh</option>
+                <option>₹75 Lakh</option>
+                <option>₹1 Crore</option>
+              </select>
+            </div>
+            <div class="col">
+              <button class="btn search-btn w-100">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore mt-3">
+      <div class="text-center">
+        <h4 class="mb-0">Explore Our Properties</h4>
+        <p class="text-secondary mt-0">
+          Enjoy the variety of 100+ Different properties in the market!
+        </p>
+      </div>
+      <div class="explore-grid">
+        <div class="explore-card">
+          <img src="./assets/explore-1.jpg" alt="House" />
+          <div class="property-info">
+            <span>FOR RENT</span>
+          </div>
+          <div class="property-details">🛏 3 &nbsp; 🛁 2 &nbsp; 📐 1950 m2</div>
+          <h5>Light And Modern House</h5>
+          <p>📍7409 Knollwood Cove, Austin, TX, 78731</p>
+        </div>
+        <div class="explore-card">
+          <img src="./assets/explore-2.jpg" alt="House" />
+          <div class="property-info">
+            <span>FOR RENT</span>
+          </div>
+          <div class="property-details">🛏 3 &nbsp; 🛁 2 &nbsp; 📐 1950 m2</div>
+          <h5>Light And Modern House</h5>
+          <p>📍7409 Knollwood Cove, Austin, TX, 78731</p>
+        </div>
+        <div class="explore-card">
+          <img src="./assets/explore-3.jpg" alt="House" />
+          <div class="property-info">
+            <span>FOR RENT</span>
+          </div>
+          <div class="property-details">🛏 3 &nbsp; 🛁 2 &nbsp; 📐 1950 m2</div>
+          <h5>Light And Modern House</h5>
+          <p>📍7409 Knollwood Cove, Austin, TX, 78731</p>
+        </div>
+        <div class="explore-card">
+          <img src="./assets/explore-4.jpg" alt="House" />
+          <div class="property-info">
+            <span>FOR RENT</span>
+          </div>
+          <div class="property-details">🛏 3 &nbsp; 🛁 2 &nbsp; 📐 1950 m2</div>
+          <h5>Light And Modern House</h5>
+          <p>📍7409 Knollwood Cove, Austin, TX, 78731</p>
+        </div>
+        <div class="explore-card">
+          <img src="./assets/explore-5.jpg" alt="House" />
+          <div class="property-info">
+            <span>FOR RENT</span>
+          </div>
+          <div class="property-details">🛏 3 &nbsp; 🛁 2 &nbsp; 📐 1950 m2</div>
+          <h5>Light And Modern House</h5>
+          <p>📍7409 Knollwood Cove, Austin, TX, 78731</p>
+        </div>
+        <div class="explore-card">
+          <img src="./assets/explore-6.jpg" alt="House" />
+          <div class="property-info">
+            <span>FOR RENT</span>
+          </div>
+          <div class="property-details">🛏 3 &nbsp; 🛁 2 &nbsp; 📐 1950 m2</div>
+          <h5>Light And Modern House</h5>
+          <p>📍7409 Knollwood Cove, Austin, TX, 78731</p>
+        </div>
+        <div class="explore-card">
+          <img src="./assets/explore-7.jpg" alt="House" />
+          <div class="property-info">
+            <span>FOR RENT</span>
+          </div>
+          <div class="property-details">🛏 3 &nbsp; 🛁 2 &nbsp; 📐 1950 m2</div>
+          <h5>Light And Modern House</h5>
+          <p>📍7409 Knollwood Cove, Austin, TX, 78731</p>
+        </div>
+        <div class="explore-card">
+          <img src="./assets/explore-8.jpg" alt="House" />
+          <div class="property-info">
+            <span>FOR RENT</span>
+          </div>
+          <div class="property-details">🛏 3 &nbsp; 🛁 2 &nbsp; 📐 1950 m2</div>
+          <h5>Light And Modern House</h5>
+          <p>📍7409 Knollwood Cove, Austin, TX, 78731</p>
+        </div>
+      </div>
+      <button class="load-more">Load More</button>
+    </section>
+
+    <section class="gridProperty mt-3">
       <div class="dinning">
         <img src="./assets/dinning.jpg" alt="" />
       </div>
@@ -46,5 +215,10 @@
         <img src="./assets/stairs.jpg" alt="" />
       </div>
     </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

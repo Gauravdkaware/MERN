@@ -122,6 +122,129 @@
     margin-bottom: 0;
 }
 
+/* New Arrivals */
+.featured-products {
+    border: 2px solid var(--info);
+    border-radius: 5px;
+
+}
+.featured-title h2 {
+    height: 60px;
+    padding: 9px;
+    margin: 0;
+    background-color: var(--info);
+    color: white;
+    font-weight: bold;
+    font-family: cursive;
+}
+.featured-item {
+    height: 135px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.featured-item img {
+    width: 40%;
+    height: 100px;
+    object-fit: contain;
+}
+.new-arrivals h2 {
+    font-weight: bold;
+    font-family: cursive;
+}
+.new-arrivals-card {
+    height: 310px;
+    border: 1px solid var(--gray-400);
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.new-arrivals-card:hover {
+    border: 1px solid var(--info);
+}
+.new-arrivals-card:hover .search-icon {
+    opacity: 1;
+}
+.product-image {
+    height: 160px;
+    position: relative;
+}
+.new-arrivals-card img {
+    width: 90%;
+    height: 160px;
+    object-fit: contain;
+}
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.new-arrivals-card-body{
+    padding-top: 15px;
+}
+.new-arrivals-card-body h5, .new-arrivals-card-body p {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.product-price {
+    transition: 0.3s;
+}
+.new-arrivals-card-body h5:hover {
+  color: var(--gray-800) !important;
+}
+.new-arrivals-card-body p:hover {
+  color: var(--info) !important;
+}
+.hover-actions {
+    position: absolute;
+    bottom: 31px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+.hover-actions b {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+.hover-actions i {
+    font-size: 18px;
+}
+.new-arrivals-card:hover .product-price {
+    opacity: 0;
+}
+.new-arrivals-card:hover .hover-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+.search-icon:hover {
+    background-color: var(--info);
+    color: white;
+}
+.hover-actions b:hover {
+    color: var(--info);
+}
+.hover-actions i:hover {
+    color: var(--info);
+}
+
 /* Two Images */
 .toy-box {
     position: relative;

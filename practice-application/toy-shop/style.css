@@ -94,13 +94,29 @@
     font-size: 17px;
     font-weight: bold;
     margin-right: 14px;
+    position: relative;
 }
 .navbar  .nav-link:hover {
     color: white;
     display: block;
+    text-decoration: underline;
+    text-underline-offset: 12px;
+    text-decoration-thickness: 2px;
 }
 .navbar .dropdown:hover .dropdown-menu {
     display: block;
+}
+.navbar .nav-link.active {
+    color: white !important;
+}
+.navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 0;
+    height: 2px;
+    background-color: white;
 }
 
 /* Support */

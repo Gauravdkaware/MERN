@@ -97,4 +97,23 @@ function printPascalTriangle(n) {
     console.log(line);
   }
 }
-printPascalTriangle(6);
+// printPascalTriangle(6);
+
+function printHollowSquare(n) {
+  for (let i = 1; i <= n; i++) {
+    let line = " ";
+    for (let j = 0; j < n; j++) {
+      if (i == 1 || i == n) {
+        line += " *";
+      } else {
+        if (j == 0 || j == n - 1) {
+          line += " *";
+        } else {
+          line += "  ";
+        }
+      }
+    }
+    console.log(line);
+  }
+}
+printHollowSquare(5);

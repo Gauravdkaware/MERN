@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Array Operations</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- To Do List Manager -->
+    <h3 class="display-6 text-primary p-2 ms-5">1. To Do List Manager</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="inputTask"
+            placeholder="Add Task..."
+          />
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" id="addTaskId">Add Task</button>
+          <button class="btn btn-primary" id="clearAllId">Clear All</button>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div id="toDos"></div>
+      </div>
+    </div>
+
+    <!-- Calculate Students Marks -->
+    <h3 class="display-6 text-primary ms-5 p-2 mt-3">
+      2. Student Marks Calculator
+    </h3>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input
+            type="number"
+            class="form-control"
+            id="calInputId"
+            placeholder="Add Marks..."
+          />
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" id="addMarkId">Add Mark</button>
+          <button class="btn btn-primary" id="calculateId">Calculate</button>
+          <button class="btn btn-primary" id="resetId">Reset</button>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <p>Total marks : <b id="totalMarksId"></b></p>
+        </div>
+        <div class="col">
+          <p>Average marks : <b id="avgMarksId"></b></p>
+        </div>
+        <div class="col">
+          <p>Highest marks : <b id="highestMarksId"></b></p>
+        </div>
+        <div class="col">
+          <p>Lowest marks : <b id="lowestMarksId"></b></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search In Array -->
+    <h3 class="display-6 text-primary ms-5 p-2 mt-3">3. Search In An Array</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="searchInputId"
+            placeholder="Search Fruits..."
+          />
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" id="searchFruitsId">Search</button>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <p>Search Result : <b id="resultFruitId"></b></p>
+      </div>
+    </div>
+
+    <!-- Filter Even And Odd Numbers -->
+    <h3 class="display-6 text-primary ms-5 p-2 mt-3">
+      4. Filter Even And Odd Numbers
+    </h3>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input
+            type="number"
+            class="form-control"
+            id="numInputId"
+            placeholder="Add Numbers..."
+          />
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" id="addNumId">Add Number</button>
+          <button class="btn btn-primary" id="showEvenId">Show Even</button>
+          <button class="btn btn-primary" id="showOddId">Show Odd</button>
+          <button class="btn btn-primary" id="clearNumId">Clear</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          class="bg-primary-subtle rounded-2 pt-2 mt-3"
+          style="height: 45px; width: 900px"
+          id="numArrayResult"
+        >
+          Numbers...
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="bg-primary-subtle rounded-2 pt-2 mt-3"
+          style="height: 45px; width: 450px"
+          id="evenResult"
+        >
+          Even Numbers...
+        </div>
+        <div
+          class="bg-primary-subtle rounded-2 pt-2 mt-3 ms-2"
+          style="height: 45px; width: 450px"
+          id="oddResult"
+        >
+          Odd Numbers...
+        </div>
+      </div>
+    </div>
+
+    <!-- Sort Names Alphabetically -->
+    <h3 class="display-6 text-primary ms-5 p-2 mt-3">
+      5. Sort Names Alphabetically
+    </h3>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="nameInputId"
+            placeholder="Add Names..."
+          />
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" id="addNameId">Add Name</button>
+          <button class="btn btn-primary" id="sortNamesId">Sort Names</button>
+          <button class="btn btn-primary" id="clearNamesId">Clear Names</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          class="bg-primary-subtle rounded-2 pt-2 mt-3"
+          style="height: 45px; width: 900px"
+          id="nameArrayResult"
+        >
+          Names...
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="bg-primary-subtle rounded-2 pt-2 mt-3"
+          style="height: 45px; width: 900px"
+          id="nameArraySorted"
+        >
+          Sorted Names...
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

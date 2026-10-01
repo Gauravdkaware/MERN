@@ -57,15 +57,15 @@ if (personOne.age === personTwo.age) {
 // 4. Calculator
 inputOneElm = document.getElementById("inputOne");
 inputTwoElm = document.getElementById("inputTwo");
-addElm = document.getElementById("addId");
-subtractElm = document.getElementById("subtractId");
-multiplyElm = document.getElementById("multiplyId");
-divideElm = document.getElementById("divideId");
+// addElm = document.getElementById("addId");
+// subtractElm = document.getElementById("subtractId");
+// multiplyElm = document.getElementById("multiplyId");
+// divideElm = document.getElementById("divideId");
 
-addElm.addEventListener("click", add);
-subtractElm.addEventListener("click", subtract);
-multiplyElm.addEventListener("click", multiply);
-divideElm.addEventListener("click", divide);
+// addElm.addEventListener("click", add);
+// subtractElm.addEventListener("click", subtract);
+// multiplyElm.addEventListener("click", multiply);
+// divideElm.addEventListener("click", divide);
 
 const calculator = {
   add: function (numOne, numTwo) {

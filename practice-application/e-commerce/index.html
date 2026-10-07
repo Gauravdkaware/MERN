@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-COMMERCE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid banner text-center px-0">
+      <h1 style="color: yellow">The Big Billion Day Sale!</h1>
+    </div>
+    <div class="container-fluid d-flex justify-content-end">
+      <button
+        type="button"
+        class="btn btn-add mt-3"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        onclick="openAddModal()"
+      >
+        Add Product
+      </button>
+    </div>
+    <div class="container mt-3">
+      <div class="row g-4" id="productList"></div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-center" id="modalTitle">
+              Add Product
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              id="imageInput"
+              class="form-control mb-3"
+              placeholder="Image path"
+            />
+            <input
+              type="text"
+              id="nameInput"
+              class="form-control mb-3"
+              placeholder="Product name"
+            />
+            <input
+              type="text"
+              id="categoryInput"
+              class="form-control mb-3"
+              placeholder="Category"
+            />
+            <input
+              type="number"
+              id="priceInput"
+              class="form-control mb-3"
+              placeholder="Price"
+            />
+            <input
+              type="number"
+              id="stockInput"
+              class="form-control mb-3"
+              placeholder="Stock"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="saveProduct()"
+              id="saveProductBtn"
+            >
+              Add Product
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

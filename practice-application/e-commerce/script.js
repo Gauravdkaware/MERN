@@ -20,8 +20,18 @@ let products = [
     price: 4999,
     stock: 20,
   },
+  {
+    image: "./assets/tv.jpg",
+    name: "Sony Bravia",
+    category: "Electronics",
+    price: 59999,
+    stock: 15,
+  },
 ];
 let editIndex = -1;
+
+let cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+document.getElementById("cartCount").textContent = cartProducts.length;
 
 let storedProducts = localStorage.getItem("products");
 if (storedProducts === null) {
@@ -58,12 +68,15 @@ function displayProducts() {
                 <p class="card-text"> 
                     Stock: ${product.stock} 
                 </p> 
-                <button class="btn btn-edit" 
-                    onclick="editProduct(${index})" > Edit 
-                </button> 
-                <button class="btn btn-delete" 
-                    onclick="deleteProduct(${index})" > Delete 
-                </button> 
+                <i class="bi bi-pencil-square icon-edit"
+                    onclick="editProduct(${index})">
+                </i> 
+                <i class="bi bi-trash icon-delete" 
+                    onclick="deleteProduct(${index})">
+                </i>
+                <button class="btn btn-outline-primary" 
+                    onclick="addTocart(${index})"> Add To Cart 
+                </button>
             </div> 
         </div> 
     </div> `;
@@ -130,4 +143,10 @@ function clearForm() {
   document.getElementById("categoryInput").value = "";
   document.getElementById("priceInput").value = "";
   document.getElementById("stockInput").value = "";
+}
+
+function addTocart(index) {
+  cartProducts.push(products[index]);
+  localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  document.getElementById("cartCount").textContent = cartProducts.length;
 }

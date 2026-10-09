@@ -3,6 +3,9 @@
   color: white;
   padding: 20px 0;
 }
+#cartCount {
+  transform: translate(-100%, 25%) !important;
+}
 .product-card {
   background: #fff;
   border: none;
@@ -31,13 +34,25 @@
   color: white;
   border: none;
 }
-.btn-edit {
-  background: linear-gradient(90deg, #2193b0, #6dd5ed);
+.icon-edit,
+.icon-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   color: white;
-  border: none;
+  cursor: pointer;
+  transition: 0.2s;
 }
-.btn-delete {
+.icon-edit {
+  background: linear-gradient(90deg, #2193b0, #6dd5ed);
+}
+.icon-delete {
   background: linear-gradient(90deg, #ff416c, #ff4b2b);
-  color: white;
-  border: none;
+}
+.icon-edit:hover,
+.icon-delete:hover {
+  transform: scale(1.1);
 }

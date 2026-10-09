@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Generate OTP</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="box">
+      <div class="box-details">
+        <h3>Verification Code</h3>
+        <p class="text-secondary my-0">
+          We have send a verification code to your
+        </p>
+        <p class="text-secondary mt-0">registered mobile number</p>
+        <button class="btn-generate" onclick="generateOTP()">
+          Generate OTP
+        </button>
+        <div class="otp-inputs">
+          <input
+            type="text"
+            maxlength="1"
+            class="otp"
+            oninput="moveNext(this, 1)"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="otp"
+            oninput="moveNext(this, 2)"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="otp"
+            oninput="moveNext(this, 3)"
+          />
+          <input type="text" maxlength="1" class="otp" />
+        </div>
+        <button class="btn-verify" onclick="verifyOTP()">Verify OTP</button>
+        <p id="message"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

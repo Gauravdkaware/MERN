@@ -10,6 +10,17 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <style>
+      .color-circle {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 2px solid white;
+        outline: 1px solid #999;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+    </style>
   </head>
   <body>
     <div id="companyName"></div>
@@ -24,6 +35,45 @@
       style="height: 200px; width: 200px"
     />
     <button id="bulbBtn" class="btn btn-primary btn-sm">ON</button>
+    <div class="container mt-5">
+      <div class="card">
+        <img
+          id="carImage"
+          src="../javascript/assets/dark.avif"
+          alt=""
+          style="height: 330px; width: 550px"
+        />
+        <div class="card-body">
+          <h4 class="card-title">TATA Nexon</h4>
+          <ul class="list-group list-group-flush mb-3">
+            <li class="list-group-item">Engine: 1497 cc Turbocharged</li>
+            <li class="list-group-item">
+              Transmission: Manual & Automatic (AMT)
+            </li>
+            <li class="list-group-item">Power: 113 bhp</li>
+          </ul>
+          <p class="fw-bold mb-2">Choose Color:</p>
+
+          <!-- Color circles -->
+          <button
+            class="color-circle"
+            id="black"
+            style="background-color: black"
+          ></button>
+          <button
+            class="color-circle"
+            id="gray"
+            style="background-color: gray"
+          ></button>
+          <button
+            class="color-circle"
+            id="blue"
+            style="background-color: rgb(11, 11, 52)"
+          ></button>
+        </div>
+      </div>
+    </div>
+
     <script>
       divCName = document.querySelector("#companyName");
       h1Elem = document.createElement("h1");
@@ -64,6 +114,20 @@
         bulbImgEmt.getAttribute("src") == "../javascript/assets/off-bulb.png"
           ? (bulbBtnEmt.textContent = "ON")
           : (bulbBtnEmt.textContent = "OFF");
+      });
+    </script>
+    <script>
+      let carImage = document.querySelector("#carImage");
+      let colorCircles = document.querySelectorAll(".color-circle");
+
+      document.querySelector("#black").addEventListener("click", function () {
+        carImage.setAttribute("src", "../javascript/assets/dark.avif");
+      });
+      document.querySelector("#gray").addEventListener("click", function () {
+        carImage.setAttribute("src", "../javascript/assets/pure-gray.avif");
+      });
+      document.querySelector("#blue").addEventListener("click", function () {
+        carImage.setAttribute("src", "../javascript/assets/royale-blue.avif");
       });
     </script>
     <script

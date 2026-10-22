@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spinner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      .customSpinner {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .dataDemo {
+        display: none;
+        background-color: antiquewhite;
+        width: 1280px;
+        height: 630px;
+      }
+      .clock {
+        text-align: center;
+        padding: 35px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .time {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .time-box {
+        min-width: 100px;
+        padding: 20px 12px;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.25);
+      }
+      .time-box span {
+        display: block;
+        color: #cbd5e1;
+        font-size: 42px;
+        font-weight: bold;
+        font-variant-numeric: tabular-nums;
+      }
+      #sliderImage {
+        width: 50%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 15px 8px 0;
+        border: none;
+        border-radius: 6px;
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="customSpinner">
+      <div class="spinner-border" role="statue">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div class="dataDemo">
+      <div class="clock">
+        <div class="time">
+          <div class="time-box"><span id="hr">HR</span></div>
+          <div class="time-box"><span id="min">MIN</span></div>
+          <div class="time-box">
+            <span id="sec">SEC</span>
+          </div>
+        </div>
+      </div>
+      <div class="slider">
+        <h2>Image Slider</h2>
+        <img id="sliderImage" src="" alt="" />
+        <div>
+          <button id="prevBtn">Previous</button>
+          <button id="nextBtn">Next</button>
+        </div>
+        <!-- <p id="imageCount"></p> -->
+      </div>
+    </div>
+    <script>
+      setTimeout(() => {
+        document.querySelector(".customSpinner").style.display = "none";
+        document.querySelector(".dataDemo").style.display = "block";
+        setInterval(fetchTime, 1000);
+      }, 3000);
+
+      function fetchTime() {
+        today = new Date();
+        hour = today.getHours();
+        document.querySelector("#hr").textContent = hour;
+        min = today.getMinutes();
+        document.querySelector("#min").textContent = min;
+        sec = today.getSeconds();
+        document.querySelector("#sec").textContent = sec;
+      }
+    </script>
+    <script>
+      let images = [
+        ".././assets/valley.jpg",
+        ".././assets/dark.avif",
+        ".././assets/pure-gray.avif",
+      ];
+
+      let currentIndex = 0;
+      let sliderImage = document.querySelector("#sliderImage");
+      let prevBtn = document.querySelector("#prevBtn");
+      let nextBtn = document.querySelector("#nextBtn");
+      // let imageCount = document.querySelector("#imageCount");
+      function showImage() {
+        sliderImage.src = images[currentIndex];
+        // imageCount.textContent = `Image ${currentIndex + 1} of ${images.length}`;
+      }
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage();
+      }
+      function previousImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage();
+      }
+      nextBtn.addEventListener("click", nextImage);
+      prevBtn.addEventListener("click", previousImage);
+      showImage();
+      let sliderInterval = setInterval(nextImage, 3000);
+      setTimeout(function () {
+        console.log("Image slider is running!");
+      }, 5000);
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

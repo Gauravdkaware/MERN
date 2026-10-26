@@ -10,6 +10,15 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <style>
+      .customSpinner {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
     <!-- <table>
@@ -21,7 +30,12 @@
       </thead>
       <tbody id="mealTable"></tbody>
     </table> -->
-    <div class="container my-4">
+    <div class="customSpinner">
+      <div class="spinner-border" role="statue">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div class="container my-4" style="display: none">
       <h2 class="mb-4">Chicken Recipes</h2>
       <div class="row g-4" id="mealCards"></div>
     </div>

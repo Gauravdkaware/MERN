@@ -1,13 +1,23 @@
 function fetchRecipe() {
+  let spinner = document.querySelector(".customSpinner");
+  let container = document.querySelector(".container");
+
   fetch(
     "https://www.themealdb.com/api/json/v1/1/search.php?s=chicken&utm_source=chatgpt.com",
   )
     .then((res) => res.json())
     .then((result) => {
       renderRecipe(result.meals);
+      container.style.display = "block";
     })
-    .catch((error) => console.log(error));
+    .catch((error) => console.log(error))
+    .finally(() => {
+      spinner.style.display = "none";
+    });
 }
+// setTimeout(() => {
+//   setInterval(fetchRecipe, 1000);
+// }, 1000);
 fetchRecipe();
 
 function renderRecipe(meals) {

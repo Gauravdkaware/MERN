@@ -1,41 +1,47 @@
-function fetchRecipe() {
-  let spinner = document.querySelector(".customSpinner");
-  let container = document.querySelector(".container");
+let spinner = document.querySelector(".customSpinner");
+let recipeContainer = document.querySelector(".container");
+let mealContainer = document.querySelector("#mealCards");
+let meals = [];
 
-  fetch(
-    "https://www.themealdb.com/api/json/v1/1/search.php?s=chicken&utm_source=chatgpt.com",
-  )
-    .then((res) => res.json())
-    .then((result) => {
-      renderRecipe(result.meals);
-      container.style.display = "block";
-    })
-    .catch((error) => console.log(error))
-    .finally(() => {
-      spinner.style.display = "none";
-    });
+function hideSpinner() {
+  spinner.style.display = "none";
 }
-// setTimeout(() => {
-//   setInterval(fetchRecipe, 1000);
-// }, 1000);
+
+// function fetchRecipe() {
+//   fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
+//     .then((res) => res.json())
+//     .then((result) => {
+//       // renderRecipe(result.meals);
+//       meals = result.meals || [];
+//       showCardView();
+//       recipeContainer.style.display = "block";
+//     })
+//     .catch((error) => console.log(error))
+//     .finally(() => {
+//       hideSpinner();
+//     });
+// }
+async function fetchRecipe() {
+  try {
+    let res = await fetch(
+      "https://www.themealdb.com/api/json/v1/1/search.php?s=chicken",
+    );
+    let result = await res.json();
+    // renderRecipe(result.meals);
+    meals = result.meals || [];
+    showCardView();
+    recipeContainer.style.display = "block";
+  } catch (error) {
+    console.log(error);
+  } finally {
+    hideSpinner();
+  }
+}
 fetchRecipe();
 
 function renderRecipe(meals) {
-  //   let table = document.getElementById("mealTable");
-
-  //   meals.forEach((meal) => {
-  //     let row = document.createElement("tr");
-  //     row.innerHTML = `
-  //         <td>
-  //             <img src="${meal.strMealThumb}" width="100">
-  //         </td>
-  //         <td>${meal.strMeal}</td>
-  //     `;
-  //     table.appendChild(row);
-  //   });
-  let container = document.querySelector("#mealCards");
   meals.forEach((meal) => {
-    container.innerHTML += `
+    mealContainer.innerHTML += `
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card h-100 shadow-sm">
               <img src="${meal.strMealThumb}"
@@ -104,4 +110,77 @@ async function showRecipeDetails(id) {
     recipeTitle.textContent = "Error";
     recipeBody.textContent = error.message;
   }
+}
+
+function showCardView() {
+  mealContainer.innerHTML = meals
+    .map(
+      (meal) => `
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 shadow-sm">
+              <img src="${meal.strMealThumb}"
+                   class="card-img-top"
+                   alt="${meal.strMeal}"
+                   style="height: 200px; object-fit: cover;">
+
+              <div class="card-body">
+                <h5 class="card-title">${meal.strMeal}</h5>
+                <p class="card-text">
+                  Category: ${meal.strCategory || "Not available"}
+                </p>
+                <p class="card-text">
+                  Area: ${meal.strArea || "Not available"}
+                </p>
+                <button class="btn btn-sm btn-primary" onclick="showRecipeDetails(${meal.idMeal})">More Info</button>
+                <a href="${meal.strYoutube || "#"}" target="_blank" class="btn btn-sm btn-primary">Recipe</a>
+              </div>
+            </div>
+          </div>
+      `,
+    )
+    .join("");
+}
+
+function showTableView() {
+  mealContainer.innerHTML = `
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th>Image</th>
+              <th>Recipe Name</th>
+              <th>Category</th>
+              <th>Area</th>
+              <th>More Info</th>
+              <th>Recipe</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${meals
+              .map(
+                (meal) => `
+                  <tr>
+                    <td>
+                      <img src="${meal.strMealThumb}" class="d-block mx-auto"
+                           width="70" alt="${meal.strMeal}">
+                    </td>
+                    <td>${meal.strMeal}</td>
+                    <td>${meal.strCategory || "N/A"}</td>
+                    <td>${meal.strArea || "N/A"}</td>
+                    <td><button class="btn btn-sm btn-primary" onclick="showRecipeDetails(${meal.idMeal})"
+                      >More Info</button>
+                    </td>
+                    <td><a href="${meal.strYoutube || "#"}" target="_blank" class="btn btn-sm btn-primary"
+                      >Recipe</a>
+                    </td>
+                  </tr>
+                `,
+              )
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
 }

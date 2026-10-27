@@ -51,9 +51,57 @@ function renderRecipe(meals) {
                 <p class="card-text">
                   Area: ${meal.strArea || "Not available"}
                 </p>
+                <button class="btn btn-sm btn-primary" onclick="showRecipeDetails(${meal.idMeal})">More Info</button>
+                <a href="${meal.strYoutube || "#"}" target="_blank" class="btn btn-sm btn-primary">Recipe</a>
               </div>
             </div>
           </div>
         `;
   });
+}
+
+async function showRecipeDetails(id) {
+  let recipeBody = document.querySelector("#recipeBody");
+  let recipeTitle = document.querySelector("#recipeTitle");
+
+  recipeTitle.textContent = "Loading Recipe Details...";
+  recipeBody.innerHTML = `
+    <div class="text-center p-4">
+      <div class="spinner-border" role="status"></div>
+      <p class="mt-2">Loading recipe...</p>
+    </div>
+  `;
+
+  bootstrap.Modal.getOrCreateInstance(
+    document.querySelector("#recipeModal"),
+  ).show();
+
+  try {
+    let res = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`,
+    );
+    if (!res.ok) {
+      throw new error("Failed to fetch recipe details");
+    }
+    let result = await res.json();
+    let meal = result.meals?.[0];
+
+    if (!meal) {
+      throw new Error("Recipe not found");
+    }
+    recipeTitle.textContent = meal.strMeal;
+
+    recipeBody.innerHTML = `
+      <img src="${meal.strMealThumb}" class="img-fluid rounded mb-3"
+           alt="${meal.strMeal}">
+
+      <p><strong>Category:</strong> ${meal.strCategory || "Not available"}</p>
+      <p><strong>Area:</strong> ${meal.strArea || "Not available"}</p>
+      <h6>Instructions</h6>
+      <p>${meal.strInstructions || "Not available"}</p>
+    `;
+  } catch {
+    recipeTitle.textContent = "Error";
+    recipeBody.textContent = error.message;
+  }
 }

@@ -1,6 +1,8 @@
 let spinner = document.querySelector(".customSpinner");
 let projectContainer = document.querySelector(".container");
 let projectDetails = document.querySelector("#projectDetails");
+let projectCount = document.querySelector("#projectCount");
+let filterCount = document.querySelector("#filterCount");
 let projects = [];
 let view = "table";
 let filterProjects = [];
@@ -20,6 +22,7 @@ async function fetchProjects(view) {
     );
     let result = await res.json();
     projects = result || [];
+    projectCount.textContent = projects.length;
     createDepartmentsArray();
     createPrioritiesArray();
     filterView(projects, view);
@@ -32,6 +35,7 @@ async function fetchProjects(view) {
 }
 
 function filterView(projects, view) {
+  filterCount.textContent = projects.length;
   if (view == "card") {
     showCardView(projects);
   } else {
@@ -49,6 +53,8 @@ function showTableView(projects) {
             <tr>
               <th>Project Name</th>
               <th>Details</th>
+              <th>Start Date</th>
+              <th>End Date</th>
               <th>Priority</th>
               <th>Department</th>
               <th>status</th>
@@ -61,6 +67,8 @@ function showTableView(projects) {
                   <tr>
                     <td>${project.ProjectName}</td>
                     <td>${project.Details || "N/A"}</td>
+                    <td>${project.startDate || "N/A"}</td>
+                    <td>${project.EndDate || "N/A"}</td>
                     <td>${project.priority || "N/A"}</td>
                     <td>${project.Department || "N/A"}</td>
                     <td>${project.status || "N/A"}</td>
@@ -190,5 +198,28 @@ function filterByStatus(status) {
   } else {
     filterProjects = projects.filter((project) => project.status === status);
   }
+  filterView(filterProjects, view);
+}
+
+function filterByStartDate() {
+  let startDate = document.querySelector("#startDate").value;
+  filterProjects = projects.filter(
+    (project) => project.startDate === startDate,
+  );
+  filterView(filterProjects, view);
+}
+
+function filterByEndDate() {
+  let endDate = document.querySelector("#endDate").value;
+  filterProjects = projects.filter((project) => project.EndDate === endDate);
+  filterView(filterProjects, view);
+}
+
+function sortByProjectName(direction) {
+  filterProjects = projects.sort((a, b) =>
+    direction === "asending"
+      ? a.ProjectName.localeCompare(b.ProjectName)
+      : b.ProjectName.localeCompare(a.ProjectName),
+  );
   filterView(filterProjects, view);
 }

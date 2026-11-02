@@ -22,7 +22,6 @@
         width: 300px;
       }
       .form-select {
-        margin-left: 5px;
         width: 300px;
       }
     </style>
@@ -31,34 +30,89 @@
     <nav class="navbar navbar-dark bg-dark px-3">
       <a class="navbar-brand" href="#">Project Management</a>
     </nav>
+    <!-- FILTERS -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              id="searchKey"
-              oninput="searchByName()"
-            />
-          </form>
-          <select
-            id="departmentSelect"
-            class="form-select"
-            onchange="filterByDepartment(this.value)"
-          ></select>
-          <select
-            id="prioritySelect"
-            class="form-select"
-            onchange="filterByPriority(this.value)"
-          ></select>
-          <select class="form-select" onchange="filterByStatus(this.value)">
-            <option value="all">All Status</option>
-            <option value="Completed">Completed</option>
-            <option value="In Progress">In Progress</option>
-          </select>
+          <div class="row w-100 g-2 align-items-end">
+            <div class="col-md-3">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                id="searchKey"
+                oninput="searchByName()"
+              />
+            </div>
+            <div class="col-md-3">
+              <select
+                id="departmentSelect"
+                class="form-select"
+                onchange="filterByDepartment(this.value)"
+              ></select>
+            </div>
+            <div class="col-md-3">
+              <select
+                id="prioritySelect"
+                class="form-select"
+                onchange="filterByPriority(this.value)"
+              ></select>
+            </div>
+            <div class="col-md-3">
+              <select class="form-select" onchange="filterByStatus(this.value)">
+                <option value="all">All Status</option>
+                <option value="Completed">Completed</option>
+                <option value="In Progress">In Progress</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Start Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="startDate"
+                oninput="filterByStartDate()"
+              />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">End Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="endDate"
+                oninput="filterByEndDate()"
+              />
+            </div>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="col">
+                  <button
+                    class="btn btn-outline-info w-100"
+                    onclick="sortByProjectName('asending')"
+                  >
+                    Name (A-Z)
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-outline-info w-100"
+                    onclick="sortByProjectName('desending')"
+                  >
+                    Name (Z-A)
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <button
+                class="btn btn-danger w-100"
+                onclick="fetchProjects('table')"
+              >
+                Clear Filters
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -67,12 +121,21 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-    <div class="container my-4" style="display: none">
-      <h3 class="mb-4">Project Details</h3>
+    <!-- TABLE -->
+    <div class="container my-1" style="display: none">
+      <div class="d-flex">
+        <div class="me-auto p-2"><h3>Project Details</h3></div>
+        <div class="p-2">
+          <p>Total Count : <span id="projectCount">0</span></p>
+        </div>
+        <div class="p-2">
+          <p>Filter Count : <span id="filterCount">0</span></p>
+        </div>
+      </div>
       <div
         class="row g-4"
         id="projectDetails"
-        style="max-height: 430px; overflow-y: auto"
+        style="max-height: 400px; overflow-y: auto"
       ></div>
     </div>
     <!-- MODAL -->

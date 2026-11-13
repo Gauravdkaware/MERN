@@ -86,3 +86,20 @@ function totalRevenue() {
   console.log("Expensive Product : " + JSON.stringify(obj));
 }
 totalRevenue();
+
+const library = [
+  {
+    user: "Amit",
+    books: [
+      { title: "JS Basics", returned: true },
+      { title: "React Guide", returned: false },
+    ],
+  },
+  {
+    user: "Neha",
+    books: [
+      { title: "Node JS", returned: true },
+      { title: "Mongo DB", returned: true },
+    ],
+  },
+];

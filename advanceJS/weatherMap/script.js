@@ -16,7 +16,7 @@ async function checkWeather() {
       throw new Error("City not found or API error");
     }
     const data = await response.json();
-    countryName.textContent = "Country : " + data.sys.country;
+    countryName.textContent = "Country Code : " + data.sys.country;
     cityName.textContent = "City Name : " + data.name;
     temp.textContent = "Temperature : " + data.main.temp + " °C";
     maxTemp.textContent = "Max Temp. : " + data.main.temp_max + " °C";

@@ -1,0 +1,12 @@
+.btnDemo{
+    background-color: #2ac8e0;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-right: 2px;
+}

@@ -1,12 +1,156 @@
+/* COMMON */
+.custom-badge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #1e3048;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
 
-.hero-section {
+.custom-badge:hover {
+  border-color: #3b82f6;
+  transform: translateX(5px);
+}
+
+.skill-card,
+.stat-card {
+  background: linear-gradient(145deg, #17243a, #111d30);
+  border: 1px solid #293b55;
+  border-radius: 14px;
+  padding: 22px;
+  transition: 0.3s ease;
+}
+
+.stat-card:hover,
+.skill-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-5px);
+}
+
+.custom-badge h5 {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.custom-heading > span {
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.custom-heading h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.custom-heading h2 span,
+.about-content h3 span,
+.stat-card h3 span {
+  color: #60a5fa;
+}
+
+.custom-heading h3 {
+  color: #94a3b8;
+  font-size: 27px;
+  font-weight: 750;
+  margin: 12px 0 8px;
+}
+
+.custom-heading p {
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.custom-icon {
+  width: 43px;
+  height: 43px;
+  min-width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #263f61;
+  color: #60a5fa;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.custom-subheading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.custom-subheading h4 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.custom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+@media (max-width: 991px) {
+  .profile-wrapper {
+    max-width: 350px;
+  }
+
+  .floating-code {
+    left: -5px;
+  }
+
+  .floating-badge {
+    right: -5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    letter-spacing: -1px;
+  }
+
+  .profile-card {
+    padding: 22px;
+  }
+
+  .floating-code,
+  .floating-badge {
+    font-size: 10px;
+  }
+
+  .custom-heading h2 {
+    font-size: 34px;
+  }
+
+  .skill-card {
+    padding: 22px;
+  }
+}
+
+/* PERSONAL */
+.personal-info {
   background: #0b1120;
   color: #ffffff;
   overflow: hidden;
   position: relative;
 }
 
-.hero-section::before {
+.personal-info::before {
   content: "";
   position: absolute;
   width: 450px;
@@ -256,31 +400,90 @@
   right: -15px;
 }
 
-@media (max-width: 991px) {
-  .profile-wrapper {
-    max-width: 350px;
-  }
+/* ABOUT ME */
 
-  .floating-code {
-    left: -5px;
-  }
+.about-section {
+  background: #101a2c;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
 
-  .floating-badge {
-    right: -5px;
-  }
+.about-subtitle {
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-content h3 {
+  font-size: 34px;
+  font-weight: 750;
+  line-height: 1.4;
+  margin: 22px 0;
+}
+
+.about-content > p {
+  color: #aab8cc;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.stat-card h4 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.strength-card {
+  background: linear-gradient(145deg, #17243a, #111d30);
+  border: 1px solid #293b55;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+.strength-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.strength-arrow {
+  color: #60a5fa;
+  font-size: 19px;
 }
 
 @media (max-width: 576px) {
-  .hero-title {
-    letter-spacing: -1px;
+  .about-content h3 {
+    font-size: 28px;
   }
 
-  .profile-card {
+  .strength-card {
     padding: 22px;
   }
+}
 
-  .floating-code,
-  .floating-badge {
-    font-size: 10px;
-  }
+/* SKILLS */
+
+.skills-section {
+  background: #0b1120;
+  color: #ffffff;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.skill-arrow {
+  color: #60a5fa;
+  font-size: 20px;
 }

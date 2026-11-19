@@ -11,18 +11,23 @@ import {
 
 const PersonalInfo = ({ data }) => {
   return (
-    <section className="hero-section">
+    <section className="personal-info">
       <div className="container">
         <div className="row align-items-center min-vh-100 py-5">
           {/* Left Content */}
           <div className="col-lg-7 order-2 order-lg-1">
+            {/* <div className="availability">
+              <span className="status-dot"></span>
+              Available for opportunities
+            </div> */}
+
             <p className="hero-greeting mt-4">HELLO, I'M</p>
 
             <h1 className="hero-title">{data.name}</h1>
 
             <h2 className="hero-designation">{data.designation}</h2>
 
-            <p className="hero-description">{data.about}</p>
+            <p className="hero-description">{data.aboutOne}</p>
 
             <div className="hero-location">
               <FaMapMarkerAlt />
@@ -34,13 +39,13 @@ const PersonalInfo = ({ data }) => {
                 Explore My Work <FaArrowRight />
               </a>
 
-              <a
+              {/* <a
                 href={data.resume}
                 download
                 className="btn btn-outline-light hero-outline-btn"
               >
                 <FaDownload /> Download CV
-              </a>
+              </a> */}
             </div>
 
             <div className="hero-socials mt-5">
@@ -73,10 +78,10 @@ const PersonalInfo = ({ data }) => {
           {/* Right Profile Card */}
           <div className="col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0">
             <div className="profile-wrapper">
-              <div className="floating-code">
+              {/* <div className="floating-code">
                 <FaCode />
                 <span>Building ideas into reality</span>
-              </div>
+              </div> */}
 
               <div className="profile-card">
                 <div className="profile-top">
@@ -96,7 +101,7 @@ const PersonalInfo = ({ data }) => {
                 <div className="profile-info">
                   <div>
                     <span>Experience</span>
-                    <strong>{data.experience}</strong>
+                    <strong>{data.experience}+ Years</strong>
                   </div>
 
                   <div>
@@ -110,16 +115,16 @@ const PersonalInfo = ({ data }) => {
                   </div>
                 </div>
 
-                <div className="profile-footer">
+                {/* <div className="profile-footer">
                   <span className="status-dot"></span>
                   Open to new opportunities
-                </div>
+                </div> */}
               </div>
 
-              <div className="floating-badge">
+              {/* <div className="floating-badge">
                 <FaCode />
                 <span>Full Stack</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

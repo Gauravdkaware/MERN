@@ -1,12 +1,17 @@
 export const personalInfo = {
   name: "Gaurav Kaware",
   designation: "Full Stack Developer",
-  experience: "3+ Years",
+  experience: "3",
   location: "Maharashtra, India",
   email: "gauravdkaware@gmail.com",
   phone: "+91 9175168337",
-  about:
+  aboutOne:
     "Full Stack Developer with experience in building responsive web applications using Angular, TypeScript, PHP, Laravel and MySQL. Interested in developing scalable applications and learning modern technologies.",
+  aboutTwo:
+    "I'm a Full Stack Developer passionate about building modern, scalable and user-friendly web applications. I enjoy solving real-world problems through clean code, thoughtful design and efficient development.",
+  aboutThree:
+    "My experience spans frontend development, backend development, REST APIs and database management. I'm always eager to learn new technologies and improve my development skills.",
+
   resume: "/resume.pdf",
   socialLinks: {
     linkedin: "https://linkedin.com/in/your-profile",
@@ -166,3 +171,34 @@ export const technicalSkills = [
 ];
 
 export const programmingLanguages = ["JavaScript", "TypeScript", "PHP", "SQL"];
+
+export const skills = [
+  {
+    category: "Frontend Development",
+    icon: "frontend",
+    items: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "Angular",
+      "React",
+      "Bootstrap",
+    ],
+  },
+  {
+    category: "Backend Development",
+    icon: "backend",
+    items: ["PHP", "Laravel", "CodeIgniter", "REST APIs"],
+  },
+  {
+    category: "Database",
+    icon: "database",
+    items: ["MySQL", "Database Design", "SQL"],
+  },
+  {
+    category: "Tools & Technologies",
+    icon: "tools",
+    items: ["Git", "GitHub", "Jira", "AWS S3", "VS Code"],
+  },
+];

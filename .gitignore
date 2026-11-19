@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE and OS files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Ignore all image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.avif
+*.svg
+*.ico
+*.bmp
+*.tiff
+*.heic

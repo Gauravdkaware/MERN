@@ -27,7 +27,7 @@ const Skills = ({ data }) => {
           </div>
           <div className="row g-4">
             {data.map((category, index) => (
-              <div className="col-md-6 col-lg-6">
+              <div className="col-md-6 col-lg-6" key={index}>
                 <div className="skill-card h-100">
                   <div className="custom-subheading">
                     <div className="custom-icon">
